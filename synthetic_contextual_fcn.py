@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def hartmann6(alpha, A, P, X):
+def hartmann6(X, alpha, A, P):
     """
     X: 6x1
     alpha: 4x1
