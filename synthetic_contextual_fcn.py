@@ -1,22 +1,22 @@
 import numpy as np
 
 
-def hartmann6(X, alpha, A, P):
+def hartmann6(alpha, A, P, X):
     """
     X: 6x1
     alpha: 4x1
     A: 4x6
     P: 4x6
     """
-    
+
     out = (-1)*np.sum(alpha*np.exp((-1)*(A*((X-P)**2))))
-    
+
     return out
-    
+
 def main(X, alpha, A, P):
     if alpha is None:
       np.array([[1.0,1.2,3.0,3.2]]).T
-    
+
     if A is None:
       A = np.array([ \
         [10,3,17,3.50,1.7,8],\
@@ -32,9 +32,6 @@ def main(X, alpha, A, P):
         [4047,8828,8732,5743,1091,381]\
                          ])
 
-                     
-        
-    return hartmann6(X, alpha, A, P)
 
-    
-    
+
+    return hartmann6(X, alpha, A, P)
